@@ -4,7 +4,7 @@ import { FaCopy } from "react-icons/fa";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { RiGitRepositoryPrivateFill } from "react-icons/ri";
 import { IoToggle } from "react-icons/io5";
-const ProfileId = () => {
+const ProfileId = ({userProfile}) => {
   return (
     <div className="profiledetail-main-group2 text-anovatext1 flex justify-between items-center py-5">
       <div className="profiledetail-main-group2-id flex items-center">
@@ -16,7 +16,7 @@ const ProfileId = () => {
         </div>
       </div>
       <div className="profiledetail-main-group2-key flex items-center bg-anova5 rounded-full px-3">
-        <span className="secret-keys-text">uNknkbkdbdfkmlsamlsd</span>
+        <span className="secret-keys-text">{userProfile.id}</span>
         <FaCopy />
       </div>
       <div className="profiledetail-main-group2-type flex items-center gap-2">

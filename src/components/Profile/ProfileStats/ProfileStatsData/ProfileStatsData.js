@@ -1,28 +1,27 @@
 import React from "react";
+import ProfileStatusBalance from "./ProfileStatusBalance/ProfileStatusBalance";
+import ProfileStatusOffers from "./ProfileStatusOffers/ProfileStatusOffers";
+import ProfileStatusUserReferCount from "./ProfileStatusUserReferCount/ProfileStatusUserReferCount";
+import ProfileStatusCoins from "./ProfileStatusCoins/ProfileStatusCoins";
+import ProfileStatusReferEarn from "./ProfileStatusReferEarn/ProfileStatusReferEarn";
+import ProfileStatusReferrer from "./ProfileStatusReferrer/ProfileStatusReferrer";
 
-const ProfileStatsData = () => {
-    const listData=[
-        {title:"Balance",amount:0},
-        {title:"Offers Completed",amount:0},
-        {title:"Coins Earned",amount:0},
-        {title:"Referral Earnings",amount:0},
-        {title:"Referrer",amount:"DollahBot"},
-        {title:"Users Referred",amount:0},
-    ]
+const ProfileStatsData = ({userProfile}) => {
   return (
     <div className="profilestats-main-items grid grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
-     {listData.map((item,index)=>{
-        return(
-            <div key={index} className="profilestats-main-items-list col-span-1 bg-anova4 flex flex-col justify-center items-center px-1 py-3 rounded-lg">
-            <div className="profilestats-main-items-list-title text-sm">
-              <span>{item.title}</span>
-            </div>
-            <div className="profilestats-main-items-list-number text-white font-semibold">
-              <span>{item.amount}</span>
-            </div>
-          </div>
-        )
-     })}
+ 
+          <ProfileStatusBalance userProfile={userProfile}/>
+
+          <ProfileStatusOffers userProfile={userProfile}/>
+
+          <ProfileStatusCoins userProfile={userProfile}/>
+
+
+          <ProfileStatusReferEarn userProfile={userProfile}/>
+          <ProfileStatusReferrer userProfile={userProfile}/>
+
+          <ProfileStatusUserReferCount userProfile={userProfile}/>
+   
     </div>
   );
 };

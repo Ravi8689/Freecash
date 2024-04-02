@@ -1,10 +1,27 @@
+import { useStore } from "@/store";
 import * as Form from "@radix-ui/react-form";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 
 export default function SignInContainer() {
+  const loginBtn=useStore((state)=>state.login)
+  const router=useRouter()
+  
+
+  const [userData,setUserData]=useState({
+    email:''
+  })
+
+  const handleLogin=(e)=>{
+    e.preventDefault()
+    loginBtn(userData)
+    // router.push('/')
+  }
   return (
     <div>
-      <Form.Root>
+      <Form.Root >
         <Form.Field className="FormField" name="email">
           <div
             style={{
@@ -22,7 +39,7 @@ export default function SignInContainer() {
             </Form.Message>
           </div>
           <Form.Control asChild>
-            <input className="Input" type="email" required />
+            <input className="Input" type="email" required onChange={(e)=>setUserData({email:e.target.value})} value={userData.email}/>
           </Form.Control>
         </Form.Field>
 
@@ -52,7 +69,7 @@ export default function SignInContainer() {
           Forgot your password?
         </Link>
         <Form.Submit asChild>
-          <button
+          <button onClick={handleLogin}
             className="w-full text-center bg-green-600 text-white hover:bg-green-800 px-2 py-2 rounded"
             style={{ marginTop: 10 }}
           >

@@ -7,7 +7,7 @@ import Link from "next/link";
 import OfferItemCard from "@/components/OfferItemsCard";
 export default function OfferItemHolder() {
   return (
-    <div className="product_main_group3 my-5 z-40 overflow-hidden gap-2">
+    <div className="product_main_group3 my-5 z-30 overflow-hidden gap-2">
       <div className="product_main_group3_sub1 flex justify-between mb-3">
         <div className="product_main_group3_innergroup1_sub1">
           <span className="flex gap-2 items-center text-anovatext1 font-medium text-lg">
@@ -24,16 +24,6 @@ export default function OfferItemHolder() {
       </div>
 
       <div className="product_main_group3_sub2 owl-carousel owl-theme flex gap-5">
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
-        <OfferItemCard />
         <OfferItemCard />
       </div>
     </div>

@@ -13,8 +13,12 @@ import ProfileAvatar from "./ProfileAvatar";
 import Link from "next/link";
 import { FaBell } from "react-icons/fa6";
 import { BiSolidJoystick } from "react-icons/bi";
+import { useStore } from "@/store";
+
+
 
 const Navbar = () => {
+  const isAuthenticated=useStore((state)=>state.isAuthenticated)
 
   const onClickSidebar = () => {
     const dom1 = document.getElementsByClassName("list-menu");
@@ -40,8 +44,10 @@ const Navbar = () => {
         <Logo onClickSidebar={onClickSidebar}/>
         <AnimatedSearchBar />
       </div>
-
+    
       <div className="navbar_group2 flex gap-2">
+      {isAuthenticated ? 
+      <>
         <Wallet />
         <ProfileAvatar />
         <DeviceSelectDropDown />
@@ -54,6 +60,8 @@ const Navbar = () => {
             <BiSolidJoystick />
           </Link>
         </div>
+        </>
+        : ''}
         <div className="signin-group">
           <Dialog.Root>
             <Dialog.Trigger asChild>

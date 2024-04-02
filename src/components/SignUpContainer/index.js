@@ -1,7 +1,34 @@
+'use client'
+
+import { useStore } from "@/store";
 import * as Form from "@radix-ui/react-form";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function SignUpContainer() {
+  const [details,setDetails]=useState({
+    fullname:'',
+    email:'',
+    password:''
+  })
+
+  const createUser=useStore((state)=>state.addUser)
+
+  const handleSubmit=()=>{
+    if(details){
+      createUser({
+        fullname:details.fullname,
+        email:details.email,
+        password:details.password
+      })
+  
+      console.log('Successful')
+    }else{
+      console.log('Not Saved')
+    }
+
+  }
+
   return (
     <Form.Root>
       <Form.Field className="FormField" name="text">
@@ -23,7 +50,7 @@ export default function SignUpContainer() {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input className="Input" type="text" required />
+          <input className="Input" type="text" required value={details.fullname} onChange={(e)=>setDetails({ ...details,fullname:e.target.value})}/>
         </Form.Control>
       </Form.Field>
 
@@ -44,7 +71,7 @@ export default function SignUpContainer() {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input className="Input" type="email" required />
+          <input className="Input" type="email" required value={details.email} onChange={(e)=>setDetails({ ...details,email:e.target.value})}/>
         </Form.Control>
       </Form.Field>
 
@@ -67,14 +94,14 @@ export default function SignUpContainer() {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input className="Input" type="password" required />
+          <input className="Input" type="password" required value={details.password} onChange={(e)=>setDetails({ ...details,password:e.target.value})}/>
         </Form.Control>
       </Form.Field>
       <Link className="text-sm" href="/">
         Forgot your password?
       </Link>
       <Form.Submit asChild>
-        <button
+        <button onClick={handleSubmit}
           className="w-full text-center bg-green-600 text-white hover:bg-green-800 px-2 py-2 rounded"
           style={{ marginTop: 10 }}
         >

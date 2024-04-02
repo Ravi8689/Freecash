@@ -1,6 +1,6 @@
 import Products from '@/components/Products'
 import React from 'react'
-import "../../../static/css/main.css";
+import "../../../../../static/css/main.css";
 const page = () => {
   return (
     <div className='text-white'>

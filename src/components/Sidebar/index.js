@@ -19,7 +19,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Sidebar = () => {
   return (
 
-      <div className="fixed overflow-y-auto sidebar-main bg-anovanavbar max-w-56 h-screen p-1 md:p-2">
+      <div className="fixed z-40 overflow-y-auto sidebar-main bg-anovanavbar max-w-56 h-screen p-1 md:p-2">
         <div className="sidebar-main-list-group-1">
             <ul>
                 <li><Link href='/' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 mb-2 p-2 hover:bg-anova6"><FaHome /><span className="list-menu">Home</span></Link></li>

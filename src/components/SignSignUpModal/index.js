@@ -3,7 +3,9 @@ import Image from "next/image";
 import SignInContainer from "../SignInContainer";
 import SignUpContainer from "../SignUpContainer";
 
+
 export default function SignSignUpModal() {
+
   return (
     <>
       <Tabs.Root className="TabsRoot" defaultValue="tab1">

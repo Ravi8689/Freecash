@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Avatar, Table } from "@radix-ui/themes";
 import { TbCoinFilled } from "react-icons/tb";
 import * as Tabs from "@radix-ui/react-tabs";
+import { useStore } from '@/store';
 const TableData = () => {
+  const userData=useStore((state)=>state.users)
   return (
     <div className="product_main_group4 my-5">
     <Tabs.Root defaultValue="offers">
@@ -27,299 +29,48 @@ const TableData = () => {
       <div className="product_main_group4-table text-blue-600">
       <Table.Root>
         <Table.Header>
-          <Table.Row className="tablerows">
+          <Table.Row className="tablerows text-anovatext2">
             <Table.ColumnHeaderCell>Name</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell className='table-cell-time'>Users</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell className='table-cell-time'>Email</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell className='table-cell-users'>Time</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell>Reward</Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          <Table.Row className="tablerows1">
+          {userData.map((item,index)=>{
+            return <Table.Row key={index} className="tablerows1">
             <Table.RowHeaderCell className="tablerows1">
               <Avatar
                 className="mr-2"
                 size="2"
                 radius="large"
-                src="/images/course1.jpg"
-                fallback="A"
+                src={item.userImage}
+                fallback={item.name.slice(0,1)}
               />
-              Danilo Sousa
+              {item.name}
             </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
+            <Table.Cell className="table-cell-users text-anovatext1">
               <Avatar
                 className="mr-2"
                 size="2"
                 radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
+                src={item.appImage}
+                fallback={item.name.slice(0,1)}
               />
-              danilo@example.com
+              {item.email}
             </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
+            <Table.Cell className='table-cell-time text-anovatext1'>{item.time}</Table.Cell>
             <Table.Cell className="flex items-center text-white font-bold">
               <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
+              {item.price}
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/money1.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c4.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
+          })}
+     
 
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/brain.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c3.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/money2.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c2.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/Nepal.png"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course.jpg"
-                color="blue"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c5.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course11.jpg"
-                fallback="N"
-                color="orange"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c4.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course12.jpg"
-                fallback="D"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c3.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                fallback="B"
-                color="pink"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c2.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course11.jpg"
-                fallback="S"
-                color="crimson"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
+      
 
         </Table.Body>
       </Table.Root>
@@ -330,299 +81,49 @@ const TableData = () => {
       <div className="product_main_group4-table text-blue-600">
       <Table.Root>
         <Table.Header>
-          <Table.Row className="tablerows">
+        <Table.Row className="tablerows text-anovatext2">
             <Table.ColumnHeaderCell>Name</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Users</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Time</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell className='table-cell-time'>Email</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell className='table-cell-users'>Time</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell>Reward</Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          <Table.Row className="tablerows1">
+        {userData.map((item,index)=>{
+            return <Table.Row key={index} className="tablerows1">
             <Table.RowHeaderCell className="tablerows1">
               <Avatar
                 className="mr-2"
                 size="2"
                 radius="large"
-                src="/images/course1.jpg"
-                fallback="A"
+                src={item.userImage}
+                fallback={item.name.slice(0,1)}
               />
-              Danilo Sousa
+              {item.name}
             </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
+            <Table.Cell className="table-cell-users text-anovatext1">
               <Avatar
                 className="mr-2"
                 size="2"
                 radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
+                src={item.appImage}
+                fallback={item.name.slice(0,1)}
               />
-              danilo@example.com
+              {item.email}
             </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
+            <Table.Cell className='table-cell-time text-anovatext1'>{item.time}</Table.Cell>
             <Table.Cell className="flex items-center text-white font-bold">
               <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
+              {item.price}
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/money1.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c4.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
+          })}
 
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/brain.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c3.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
+      
 
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/money2.jpg"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c2.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/Nepal.png"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course.jpg"
-                color="blue"
-                fallback="A"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c5.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course11.jpg"
-                fallback="N"
-                color="orange"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c4.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course12.jpg"
-                fallback="D"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c3.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                fallback="B"
-                color="pink"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c2.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
-
-          <Table.Row className="tablerows1">
-            <Table.RowHeaderCell className="tablerows1">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="large"
-                src="/images/course11.jpg"
-                fallback="S"
-                color="crimson"
-              />
-              Danilo Sousa
-            </Table.RowHeaderCell>
-            <Table.Cell className="table-cell-users">
-              <Avatar
-                className="mr-2"
-                size="2"
-                radius="full"
-                src="/images/chat/c1.jpg"
-                fallback="A"
-              />
-              danilo@example.com
-            </Table.Cell>
-            <Table.Cell className='table-cell-time'>a minute ago</Table.Cell>
-            <Table.Cell className="flex items-center text-white font-bold">
-              <TbCoinFilled className="mr-1 text-yellow-500" />
-              500
-            </Table.Cell>
-          </Table.Row>
+          
 
         </Table.Body>
       </Table.Root>

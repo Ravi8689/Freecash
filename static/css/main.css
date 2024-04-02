@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    padding: 1rem 0.5rem;
   }
 
 
@@ -65,6 +65,10 @@
     top: -160px;
     opacity: .75;
     z-index:1;
+  }
+
+  .product_main_group3_sub1{
+    z-index: 2;
   }
 
   .product_main_group3_innergroup2_item_image{
