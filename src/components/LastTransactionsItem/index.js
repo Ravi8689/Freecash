@@ -1,11 +1,11 @@
-
+import { SiBitcoinsv } from "react-icons/si";
 export default function LastTransactionItem({item}) {
   return (
     <div
     className="product_main_group1_sub2_item py-2 px-3 gap-2 flex justify-between item-center gap-1 bg-anovanavbar flex justify-center items-center rounded"
   >
     <div className="product_main_group1_sub2_image">
-      {<item.icon className={`w-6 h-6 text-${item.color}-500`} />}
+      {<SiBitcoinsv className={`w-6 h-6 text-${item.color}-500`} />}
     </div>
     <div className="product_main_group1_sub2_content text-xs">
       <div className="product_main_group1_sub2_content_title font-medium">
