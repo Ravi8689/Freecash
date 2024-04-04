@@ -5,6 +5,7 @@ import { promotion } from "./db/promotion";
 import { cryptoCurrency } from "./db/cryptoCurrency";
 import { getUser } from "./db/getUser";
 import { messages } from "./db/messages";
+import { getTableData } from "./db/getTableData";
 
 
 const store = (set) => ({
@@ -20,6 +21,9 @@ const store = (set) => ({
   
   // All Products
   products:products,
+
+  //Table Data
+  getTableData:getTableData,
  
   // UserLists
   users:users,

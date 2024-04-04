@@ -6,6 +6,9 @@ import "@radix-ui/themes/styles.css";
 import { Theme, ThemePanel } from "@radix-ui/themes";
 import "../globals.css";
 import { useStore } from "@/store";
+
+
+
 const ProtectedLayout = ({ children }) => {
   const isAuthenticated = useStore((state) => state.isAuthenticated);
 

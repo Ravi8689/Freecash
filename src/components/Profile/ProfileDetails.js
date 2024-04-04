@@ -5,6 +5,7 @@ import ProfileId from "./ProfileId/ProfileId";
 import ProfileStats from "./ProfileStats/ProfileStats";
 import { useStore } from "@/store";
 
+
 const ProfileDetails = () => {
   const userProfile=useStore((state)=>state.getOneUser)
   return (
