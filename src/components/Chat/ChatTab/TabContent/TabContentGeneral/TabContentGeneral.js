@@ -11,7 +11,10 @@ const TabContentGeneral = ({messages,handleSubmit,handleDelete,newMessage,setNew
     className="Main-conetnts bg-anova2 p-2 mt-4"
     value="general"
   >
+    <div className='height-content_chat overflow-y-scroll'>
     <TabContentGeneralScrollArea setNewMessage={setNewMessage} newMessage={newMessage} messages={messages} handleSubmit={handleSubmit} handleDelete={handleDelete}/>
+
+    </div>
 
     <TabContentGeneralForm setNewMessage={setNewMessage} newMessage={newMessage} messages={messages} handleSubmit={handleSubmit} handleDelete={handleDelete}/>
   </Tabs.Content>

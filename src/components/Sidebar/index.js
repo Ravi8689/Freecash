@@ -19,7 +19,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Sidebar = () => {
   return (
 
-      <div className="fixed z-40 overflow-y-auto sidebar-main bg-anovanavbar max-w-56 h-screen p-1 md:p-2">
+      <div className="height-content z-40 overflow-y-auto sidebar-main bg-anovanavbar max-w-56 p-1 md:p-2">
         <div className="sidebar-main-list-group-1">
             <ul>
                 <li><Link href='/' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 mb-2 p-2 hover:bg-anova6"><FaHome /><span className="list-menu">Home</span></Link></li>
@@ -35,6 +35,14 @@ const Sidebar = () => {
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Featured</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>All</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Apps</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Games</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Surveys</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>GPT</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Deposits</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Games</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Surveys</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>GPT</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Deposits</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Games</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>Surveys</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><p>GPT</p><span className="bg-anovatext2 text-xs md:text-sm rounded-full px-1 text-center">10</span></Link></li>

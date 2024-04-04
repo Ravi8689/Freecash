@@ -12,7 +12,7 @@ const ChatTab = () => {
     <div className="chat-main-group1-switch  mt-2">
       <Tabs.Root defaultValue="general">
         <TabList/>
-
+        
         <TabContent/>
       </Tabs.Root>
     </div>

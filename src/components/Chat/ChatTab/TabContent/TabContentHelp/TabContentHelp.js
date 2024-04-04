@@ -10,8 +10,9 @@ import TabContentHelpForm from './TabContentHelpForm/TabContentHelpForm';
 const TabContentHelp = ({messages,handleSubmit,handleDelete,newMessage,setNewMessage}) => {
   return (
     <Tabs.Content className="bg-anova2 p-2 mt-4" value="help">
+          <div className='height-content_chat overflow-y-scroll'>
       <TabContentHelpScrollArea setNewMessage={setNewMessage} newMessage={newMessage} messages={messages} handleSubmit={handleSubmit} handleDelete={handleDelete}/>
-
+</div>
     <TabContentHelpForm setNewMessage={setNewMessage} newMessage={newMessage} messages={messages} handleSubmit={handleSubmit} handleDelete={handleDelete}/>
   </Tabs.Content>
   )

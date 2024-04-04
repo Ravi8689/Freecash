@@ -17,6 +17,7 @@
 }
 body{
   background-color: #0d131c !important;
+  overflow: hidden;
 }
 
 @layer utilities {
@@ -48,4 +49,12 @@ hr{
   .table-cell-time,.table-cell-users{
     display: none;
   }
+}
+
+.height-content{
+  height: calc(100vh - 50px)
+}
+
+.height-content_chat{
+  height: 80vh;
 }

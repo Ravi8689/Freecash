@@ -5,9 +5,8 @@ import Navbar from "@/components/Navbar";
 import "@radix-ui/themes/styles.css";
 import { Theme, ThemePanel } from "@radix-ui/themes";
 import "../globals.css";
+import "../../../static/css/sidebar.css";
 import { useStore } from "@/store";
-
-
 
 const ProtectedLayout = ({ children }) => {
   const isAuthenticated = useStore((state) => state.isAuthenticated);
@@ -20,9 +19,28 @@ const ProtectedLayout = ({ children }) => {
       radius="large"
       scaling="95%"
     >
+      <div className="">
       <Navbar />
+      </div>
       {/* {isAuthenticated ? ( */}
-        <div className="grid grid-cols-7 justify-between gap-2 text-white">
+      <div className="flex justify-between gap-1 text-white">
+        <div className="z-40 lg:block">
+          <Sidebar />
+        </div>
+
+        <div
+          className="mx-auto height-content overflow-y-scroll"
+          style={{ maxWidth: "1340px" }}
+        >
+          {children}
+        </div>
+
+        <div className=" hidden xl:block">
+          <Chat />
+        </div>
+      </div>
+
+      {/* <div className="grid grid-cols-7 justify-between gap-2 text-white">
           <div className="col-span-1 z-40 lg:block">
             <Sidebar />
           </div>
@@ -35,7 +53,7 @@ const ProtectedLayout = ({ children }) => {
           <div className="col-span-2 hidden xl:grid justify-items-end">
             <Chat />
           </div>
-        </div>
+        </div> */}
       {/* // ) : (
       //   <h2 className="text-white text-center mt-40 text-4xl">Please click to Sign in to vist the page</h2>
       // )} */}

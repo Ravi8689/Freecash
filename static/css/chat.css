@@ -9,7 +9,7 @@
 
   .ScrollArea{
     position: relative;
-    height: 77.6vh; /* Adjust thvhe height as needed, minus the height of the chat-writing-box */
+    height: 18.6vh; /* Adjust thvhe height as needed, minus the height of the chat-writing-box */
     
   }
 
