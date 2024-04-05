@@ -12,7 +12,7 @@ import { usePathname } from 'next/navigation'
 const MobileNavigation = () => {
     const pathname=usePathname()
   return (
-    <div className='fixed z-50 bg-anova3 left-0 right-0 bottom-0 py-3 px-4'>
+    <div className='fixed z-50 bg-anova3 left-0 right-0 bottom-0 py-3 px-4 main-mobile-menu'>
         <ul className='flex justify-between items-center'>
                 <li><Link href='/' className={`{ ${pathname === '/' ? 'active-menu' : ''} flex flex-col rounded-lg sidebar-main-justify-center items-center text-anovatext1 hover:text-green-600}`}><FaHome className='mobile-menu-icon'/><span className="mobile-menu">Home</span></Link></li>
                 <li><Link href='/products' className={`{ ${pathname === '/products' ? 'active-menu' : ''} flex flex-col rounded-lg sidebar-main-justify-center items-center text-anovatext1 hover:text-green-600}`}><LuContainer /><span className="mobile-menu">Product</span></Link></li>
