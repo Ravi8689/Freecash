@@ -55,6 +55,12 @@ hr{
   height: calc(100vh - 50px)
 }
 
+@media only screen and (max-width:650px){
+  .height-content{
+    height: calc(100vh - 100px)
+  }
+}
+
 .height-content_chat{
   height: 77.5vh;
 }
