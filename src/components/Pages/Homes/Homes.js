@@ -10,7 +10,7 @@ const Homes = () => {
     <div className="product_main my-1 grid">
     <div className="product_main_group2 my-4 overflow-hidden flex justify-start gap-5">
       <FeaturedOffersCardItem />
-      <FeaturedOffersCardItem />
+      {/* <FeaturedOffersCardItem /> */}
     </div>
 
     <AnimatedOfferItemHolder />
