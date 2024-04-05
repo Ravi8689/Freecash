@@ -30,7 +30,7 @@ export default function SignInContainer() {
               justifyContent: "space-between",
             }}
           >
-            <Form.Label className="FormLabel text-anovatext1">Email</Form.Label>
+            <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">Email</Form.Label>
             <Form.Message className="FormMessage" match="valueMissing">
               Please enter your email
             </Form.Message>
@@ -51,7 +51,7 @@ export default function SignInContainer() {
               justifyContent: "space-between",
             }}
           >
-            <Form.Label className="FormLabel text-anovatext1">
+            <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">
               password
             </Form.Label>
             <Form.Message className="FormMessage" match="valueMissing">
