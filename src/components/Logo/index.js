@@ -9,7 +9,7 @@ export default function Logo({onClickSidebar}) {
     <div className="navbar_group1_subgroup_1 flex items-center gap-2">
     <FaBars
       onClick={onClickSidebar}
-      className="sidebar-toggle mr-2 cursor-pointer text-white"
+      className="sidebar-toggle mr-2 cursor-pointer text-white hidden md:block"
     />
 
     <Link href="/" className="flex items-center">

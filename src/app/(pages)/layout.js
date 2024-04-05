@@ -7,6 +7,7 @@ import { Theme, ThemePanel } from "@radix-ui/themes";
 import "../globals.css";
 import "../../../static/css/sidebar.css";
 import { useStore } from "@/store";
+import MobileNavigation from "@/components/MobileNavigation/MobileNavigation";
 
 const ProtectedLayout = ({ children }) => {
   const isAuthenticated = useStore((state) => state.isAuthenticated);
@@ -19,13 +20,15 @@ const ProtectedLayout = ({ children }) => {
       radius="large"
       scaling="95%"
     >
-      
       <Navbar />
 
       {/* {isAuthenticated ? ( */}
       <div className="flex justify-between gap-2 text-white">
-        <div className="z-40 lg:block">
+        <div className="z-40 hidden md:block">
           <Sidebar />
+        </div>
+        <div className="md:hidden">
+          <MobileNavigation/>
         </div>
 
         <div

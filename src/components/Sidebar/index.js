@@ -15,18 +15,20 @@ import { MdContactPage } from "react-icons/md";
 import { LuContainer } from "react-icons/lu";
 import { MdMedicalInformation } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
+    const pathname=usePathname()
   return (
 
       <div className="height-content z-40 overflow-y-auto sidebar-main bg-anovanavbar max-w-56 p-1 md:p-2">
         <div className="sidebar-main-list-group-1">
             <ul>
-                <li><Link href='/' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 mb-2 p-2 hover:bg-anova6"><FaHome /><span className="list-menu">Home</span></Link></li>
-                <li><Link href='/products' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><LuContainer /><span className="list-menu">Product</span></Link></li>
-                <li><Link href='#' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><BiSolidCategory /><span className="list-menu">Category</span></Link></li>
-                <li><Link href='#' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><MdMedicalInformation /><span className="list-menu">About</span></Link></li>
-                <li><Link href='/profile' className="flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:bg-anova6"><MdContactPage /><span className="list-menu">Profile</span></Link></li>
+                <li><Link href='/' className={`flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:text-green-600 ${pathname==='/' ? 'active-menu' :''}`}><FaHome /><span className="list-menu">Home</span></Link></li>
+                <li><Link href='/products' className={`flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:text-green-600 ${pathname==='/products' ? 'active-menu' :''}`}><LuContainer /><span className="list-menu">Product</span></Link></li>
+                <li><Link href='#' className={`flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:text-green-600 ${pathname==='#' ? 'active-menu' :''}`}><BiSolidCategory /><span className="list-menu">Category</span></Link></li>
+                <li><Link href='#' className={`flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:text-green-600 ${pathname==='#' ? 'active-menu' :''}`}><MdMedicalInformation /><span className="list-menu">About</span></Link></li>
+                <li><Link href='/profile' className={`flex rounded-lg sidebar-main-justify-center items-center text-anovatext1 text-base gap-2 my-2 p-2 hover:text-green-600 ${pathname==='/profile' ? 'active-menu' :''}`}><MdContactPage /><span className="list-menu">Profile</span></Link></li>
             </ul>
         </div>
     <hr className="px-2 border-anovatext2"/>

@@ -58,3 +58,7 @@ hr{
 .height-content_chat{
   height: 77.5vh;
 }
+
+.active-menu{
+  color: rgb(0, 255, 89);
+}
