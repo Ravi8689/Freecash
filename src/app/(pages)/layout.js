@@ -19,18 +19,18 @@ const ProtectedLayout = ({ children }) => {
       radius="large"
       scaling="95%"
     >
-      <div className="">
+      
       <Navbar />
-      </div>
+
       {/* {isAuthenticated ? ( */}
-      <div className="flex justify-between gap-1 text-white">
+      <div className="flex justify-between gap-2 text-white">
         <div className="z-40 lg:block">
           <Sidebar />
         </div>
 
         <div
-          className="mx-auto height-content overflow-y-scroll"
-          style={{ maxWidth: "1340px" }}
+          className="height-content overflow-y-scroll px-2"
+          style={{ width: "100%" }}
         >
           {children}
         </div>

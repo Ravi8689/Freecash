@@ -8,7 +8,7 @@ import "../../../../static/css/main.css";
 
 const Products = () => {
   return (
-    <div className="product_main my-1 grid">
+    <div className="product_main my-1">
       <AnimatedOfferItemHolder />
 
       <OfferItemHolder />
