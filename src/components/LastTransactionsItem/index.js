@@ -12,7 +12,7 @@ export default function LastTransactionItem({item}) {
       <div className="product_main_group1_sub2_content_title font-medium">
         <p>{item.title}</p>
       </div>
-      <div className="product_main_group1_sub2_content_time text-anovatext1 text-nowrap">
+      <div className="product_main_group1_sub2_content_time text-anovatext1 text-nowrap hidden md:block">
         <p>{item.time}</p>
       </div>
     </div>
