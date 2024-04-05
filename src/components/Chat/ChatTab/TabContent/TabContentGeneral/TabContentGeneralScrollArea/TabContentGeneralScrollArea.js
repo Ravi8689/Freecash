@@ -5,7 +5,7 @@ import TabContentGeneralScrollAreaMessage from './TabContentGeneralScrollAreaMes
 const TabContentGeneralScrollArea = ({messages,handleDelete}) => {
   return (
     <ScrollArea
-    className="ScrollArea"
+    className=""
     type="always"
     scrollbars="vertical"
   >

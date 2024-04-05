@@ -6,7 +6,7 @@ import TabContentHelpScrollAreaMessage from './TabContentHelpScrollAreaMessage/T
 const TabContentHelpScrollArea = ({messages,handleSubmit,handleDelete,newMessage,setNewMessage}) => {
   return (
     <ScrollArea
-    className="ScrollArea"
+    className=""
     type="always"
     scrollbars="vertical"
   >
