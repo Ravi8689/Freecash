@@ -8,7 +8,7 @@ import "../globals.css";
 import "../../../static/css/sidebar.css";
 import { useStore } from "@/store";
 import MobileNavigation from "@/components/MobileNavigation/MobileNavigation";
-
+import Image from "next/image";
 const ProtectedLayout = ({ children }) => {
   const isAuthenticated = useStore((state) => state.isAuthenticated);
 
@@ -22,7 +22,7 @@ const ProtectedLayout = ({ children }) => {
     >
       <Navbar />
 
-      {/* {isAuthenticated ? ( */}
+      {isAuthenticated ? (
       <div className="flex justify-between gap-2 text-white">
         <div className="z-40 hidden md:block">
           <Sidebar />
@@ -43,23 +43,14 @@ const ProtectedLayout = ({ children }) => {
         </div>
       </div>
 
-      {/* <div className="grid grid-cols-7 justify-between gap-2 text-white">
-          <div className="col-span-1 z-40 lg:block">
-            <Sidebar />
-          </div>
+ 
+       ) : (
+        <div className="flex flex-col justify-center items-center h-screen">
+         <div> <Image width={280} alt='no' height={280} src='/images/login.svg'/></div>
+         <div> <h2 className="text-white text-center mt-10 text-4xl">Please click to Sign in to vist the page</h2></div>
 
-          <div className="col-span-7 ml-10 md:ml-12 lg:ml-0 lg:col-span-6 xl:col-span-4 px-2">
-      
-            {children}
-          </div>
-
-          <div className="col-span-2 hidden xl:grid justify-items-end">
-            <Chat />
-          </div>
-        </div> */}
-      {/* // ) : (
-      //   <h2 className="text-white text-center mt-40 text-4xl">Please click to Sign in to vist the page</h2>
-      // )} */}
+        </div>
+       )} 
     </Theme>
   );
 };

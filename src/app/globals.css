@@ -59,6 +59,9 @@ hr{
   .height-content{
     height: calc(100vh - 140px)
   }
+
+
+  
 }
 
 .height-content_chat{
