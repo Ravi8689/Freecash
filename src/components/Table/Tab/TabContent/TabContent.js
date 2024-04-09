@@ -9,9 +9,11 @@ const TabContent = () => {
   const getTableData = useStore((state) => state.getTableData);
   const [loading,setLoading]=useState(true)
   return (
-    <div>
-            <Tabs.Content value="all">
-      {loading ? <Loading/> : 
+  <>
+ 
+         {loading ? <Loading/> : 
+         <div>  <Tabs.Content value="all">
+   
 
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
@@ -67,12 +69,12 @@ const TabContent = () => {
             
           </Table.Root>
           </div>
-        }
+    
        
      </Tabs.Content>
 
       <Tabs.Content value="offers">
-      {loading ? <Loading/> : 
+     
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
             <Table.Header>
@@ -136,11 +138,11 @@ const TabContent = () => {
             </Table.Body>
           </Table.Root>
         </div>
-}
+
       </Tabs.Content>
 
       <Tabs.Content value="withdrawals">
-      {loading ? <Loading/> : 
+
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
             <Table.Header>
@@ -201,9 +203,11 @@ const TabContent = () => {
             </Table.Body>
           </Table.Root>
         </div>
-}
+
       </Tabs.Content>
-    </div>
+      </div>
+          }
+     </>
   );
 };
 
