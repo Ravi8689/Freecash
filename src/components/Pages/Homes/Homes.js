@@ -16,7 +16,7 @@ const Homes = () => {
     <AnimatedOfferItemHolder />
 
     <OfferItemHolder />
-    <SkelectonItem/>
+    {/* <SkelectonItem/> */}
     <TableData />
   </div>
   )

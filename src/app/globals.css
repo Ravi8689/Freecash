@@ -71,3 +71,9 @@ hr{
 .active-menu{
   color: rgb(0, 255, 89);
 }
+
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}

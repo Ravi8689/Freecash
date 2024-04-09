@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { Avatar, Table } from "@radix-ui/themes";
 import { useStore } from "@/store";
 import Link from "next/link";
 import { TbCoinFilled } from "react-icons/tb";
+import Loading from "../../Loading";
 const TabContent = () => {
   const getTableData = useStore((state) => state.getTableData);
-
+  const [loading,setLoading]=useState(true)
   return (
     <div>
-      <Tabs.Content value="all">
+            <Tabs.Content value="all">
+      {loading ? <Loading/> : 
+
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
             <Table.Header>
@@ -24,6 +27,7 @@ const TabContent = () => {
                 <Table.ColumnHeaderCell>Reward</Table.ColumnHeaderCell>
               </Table.Row>
             </Table.Header>
+
 
             <Table.Body>
               {getTableData.map((item, index) => {
@@ -60,11 +64,15 @@ const TabContent = () => {
                 );
               })}
             </Table.Body>
+            
           </Table.Root>
-        </div>
-      </Tabs.Content>
+          </div>
+        }
+       
+     </Tabs.Content>
 
       <Tabs.Content value="offers">
+      {loading ? <Loading/> : 
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
             <Table.Header>
@@ -112,10 +120,13 @@ const TabContent = () => {
                         <Table.Cell className="table-cell-time text-anovatext1">
                           {item.time}
                         </Table.Cell>
-                        <Table.Cell className="flex items-center text-white font-bold">
+                        <Table.Cell className="text-white font-bold">
+                          <div className="flex items-center">
                           <TbCoinFilled className="mr-1 text-yellow-500" />
                           {item.reward}
+                          </div>
                         </Table.Cell>
+                        
                       </Table.Row>
                     );
                   })
@@ -125,9 +136,11 @@ const TabContent = () => {
             </Table.Body>
           </Table.Root>
         </div>
+}
       </Tabs.Content>
 
       <Tabs.Content value="withdrawals">
+      {loading ? <Loading/> : 
         <div className="product_main_group4-table text-blue-600">
           <Table.Root>
             <Table.Header>
@@ -188,6 +201,7 @@ const TabContent = () => {
             </Table.Body>
           </Table.Root>
         </div>
+}
       </Tabs.Content>
     </div>
   );

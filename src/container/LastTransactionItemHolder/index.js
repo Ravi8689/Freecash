@@ -9,11 +9,13 @@ import { SiBinance } from "react-icons/si";
 import { TbCurrencySolana } from "react-icons/tb";
 import { useState } from "react";
 import { useStore } from "@/store";
+import Loading from "./Loading";
 
 
 
 export default function LastTransactionItemHolder() {
   const cryptos=useStore((state)=>state.currencies)
+  const [loading,setLoading]=useState(true)
   console.log('crypto list',cryptos)
 
   return (
@@ -24,13 +26,19 @@ export default function LastTransactionItemHolder() {
       </span>
     </div>
 
-    <div className="product_main_group1_sub2 flex gap-2 owl-carousel owl-theme">
-      {cryptos.map((item, index) => {
+   
+      {loading ? <Loading/> :
+       <div className="product_main_group1_sub2 flex gap-2 owl-carousel owl-theme">
+ 
+        {cryptos.map((item, index) => {
         return (
           <LastTransactionItem key={index} item={item}/>
         );
       })}
-    </div>
+         </div>
+    
+      }
+ 
   </div>
   );
 }

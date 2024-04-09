@@ -2,6 +2,7 @@ import React from 'react'
 import { Avatar, Box, ScrollArea, Text } from "@radix-ui/themes";
 import { MdEmojiEmotions } from "react-icons/md";
 import { MdOutlineShare } from "react-icons/md";
+
 const TabContentGeneralScrollAreaMessage = ({messages,handleDelete}) => {
   return (
     <div className="chat-box-main_chatCollection flex flex-col mt-2">
@@ -49,9 +50,12 @@ const TabContentGeneralScrollAreaMessage = ({messages,handleDelete}) => {
               </button>
             </div>
           </div>
+          
         </div>
+        
       );
     })}
+
   </div>  )
 }
 

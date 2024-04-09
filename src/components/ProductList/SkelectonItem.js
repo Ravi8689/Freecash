@@ -20,7 +20,7 @@ const SkelectonItem = () => {
         </div>
       </div>
       
-      <div className="product_main_group3_sub2 gap-2">
+      <div className="product_main_group3_sub2 owl-carousel owl-theme flex gap-5">
         <Items />
       </div>
     </div>
