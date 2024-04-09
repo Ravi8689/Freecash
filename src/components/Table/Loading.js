@@ -2,33 +2,32 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="product_main_group1_sub2 flex flex-col gap-1">
+    <div className="product_main_group1_sub2 flex flex-col gap-1 animate-pulse">
       <div className="flex justify-between">
         <div className="mb-5 flex gap-2">
-          <div className="w-16 md:w-24 h-6 bg-gray-700 rounded-lg"></div>
-          <div className="w-16 md:w-24 h-6 bg-gray-700 rounded-lg"></div>
-          <div className="w-16 md:w-24 h-6 bg-gray-700 rounded-lg"></div>
-
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
         </div>
 
         <div className="mb-5 flex gap-2">
-          <div className="w-16 md:w-24 h-6 bg-gray-700 rounded-lg"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
         </div>
       </div>
       <table className="w-full border-collapse">
         <thead>
           <tr>
             <th>
-              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-800"></div>
+            </th>
+            <th className="table-cell-time">
+              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-800"></div>
+            </th>
+            <th className="table-cell-time">
+              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-800"></div>
             </th>
             <th>
-              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-700"></div>
-            </th>
-            <th>
-              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-700"></div>
-            </th>
-            <th>
-              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2.5 w-16 md:w-36 bg-gray-200 rounded dark:bg-gray-800"></div>
             </th>
           </tr>
         </thead>
@@ -48,10 +47,10 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
+            <td className="table-cell-time">
               <div className="flex items-center gap-1">
                 <div className="flex items-center justify-center w-8 h-8  rounded-full bg-gray-800">
                   <svg
@@ -65,14 +64,14 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <td className="table-cell-time">
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
             <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
           </tr>
 
@@ -91,10 +90,10 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
+            <td className="table-cell-time">
               <div className="flex items-center gap-1">
                 <div className="flex items-center justify-center w-8 h-8  rounded-full bg-gray-800">
                   <svg
@@ -108,16 +107,17 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <td className="table-cell-time">
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
             <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
           </tr>
+
 
           <tr>
             <td>
@@ -134,10 +134,10 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
+            <td className="table-cell-time">
               <div className="flex items-center gap-1">
                 <div className="flex items-center justify-center w-8 h-8  rounded-full bg-gray-800">
                   <svg
@@ -151,16 +151,17 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <td className="table-cell-time">
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
             <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
           </tr>
+
 
           <tr>
             <td>
@@ -177,10 +178,10 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
+            <td className="table-cell-time">
               <div className="flex items-center gap-1">
                 <div className="flex items-center justify-center w-8 h-8  rounded-full bg-gray-800">
                   <svg
@@ -194,16 +195,17 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <td className="table-cell-time">
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
             <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
           </tr>
+
 
           <tr>
             <td>
@@ -220,10 +222,10 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
+            <td className="table-cell-time">
               <div className="flex items-center gap-1">
                 <div className="flex items-center justify-center w-8 h-8  rounded-full bg-gray-800">
                   <svg
@@ -237,16 +239,20 @@ const Loading = () => {
                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                   </svg>
                 </div>
-                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+                <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
               </div>
             </td>
-            <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <td className="table-cell-time">
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
             <td>
-              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-700"></div>
+              <div className="h-2 w-16 md:w-24 lg:w-32 bg-gray-200 rounded dark:bg-gray-800"></div>
             </td>
           </tr>
+
+          
+
+         
         </tbody>
       </table>
     </div>

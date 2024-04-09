@@ -10,7 +10,6 @@ const TabContent = () => {
 
   return (
     <>
-    
         <div>
           <Tabs.Content value="all">
             <div className="product_main_group4-table text-blue-600">

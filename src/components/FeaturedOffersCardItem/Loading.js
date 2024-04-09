@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="flex justify-between gap-5 overflow-hidden">
+    <div className="flex justify-between gap-5 overflow-hidden animate-pulse">
       <div className="flex flex-col gap-1 w-40 md:w-72 rounded-lg bg-anova4 pb-4">
         <div class="flex items-center justify-center h-40 mb-2 bg-gray-300 rounded dark:bg-gray-700">
           <svg
