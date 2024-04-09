@@ -2,9 +2,9 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="product_main_group1_sub2 flex gap-1 owl-carousel owl-theme">
+    <div className="product_main_group1_sub2 flex gap-1 owl-carousel owl-theme mt-1">
       <div className="py-2 px-1 gap-1 flex justify-start item-center bg-anovanavbar rounded">
-        <div className="flex items-center justify-center w-8 h-6 rounded-full bg-gray-300 dark:bg-gray-700">
+        <div className="flex items-center justify-center w-9 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
             class="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
