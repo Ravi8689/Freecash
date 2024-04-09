@@ -1,20 +1,42 @@
 import React, { Suspense, useEffect, useState } from "react";
-import ProductPop from "./ProductPop/ProductPop";
 import Image from "next/image";
 import { TbCoinFilled } from "react-icons/tb";
 import { useStore } from "@/store";
+import LoadingContent from "../LoadingContent";
 
-const ProductItem = () => {
-  const products = useStore((state) => state.products);
+const Items = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const getData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        const data = await response.json();
+        setProducts(data);
+        console.log(data);
+      } catch (error) {
+        console.log("error");
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
+  }, []);
+
+  if (loading) {
+    return <LoadingContent />;
+  }
 
   return (
     <>
-      {products.map((item,index) => {
+      {products.map((item, index) => {
         return (
-          <div key={index} className="product_main_group3_sub2_item bg-anova4 w-28 md:w-32 p-3 flex flex-col rounded-lg">
+          <div
+            key={index}
+            className="product_main_group3_sub2_item bg-anova4 w-28 md:w-32 p-3 flex flex-col rounded-lg">
             <div className="product_main_group3_innergroup2_item_image flex flex-col  items-center ">
-              <Image
-               
+              <img
                 width={150}
                 height={150}
                 className="rounded-lg w-20 md:w-36"
@@ -22,7 +44,7 @@ const ProductItem = () => {
                 src={item.image}
               />
               <div className="play-button-icon text-white ">
-                <ProductPop product={item} />
+                <TbCoinFilled />
               </div>
             </div>
 
@@ -43,9 +65,8 @@ const ProductItem = () => {
           </div>
         );
       })}
- 
     </>
   );
 };
 
-export default ProductItem;
+export default Items;
