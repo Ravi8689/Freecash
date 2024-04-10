@@ -2,16 +2,16 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="product_main_group1_sub2 flex flex-col gap-1 animate-pulse">
+    <div className="product_main_group1_sub2 flex flex-col gap-1 mt-6 animate-pulse">
       <div className="flex justify-between">
         <div className="mb-5 flex gap-2">
-          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
-          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
-          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-full"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-full"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-full"></div>
         </div>
 
         <div className="mb-5 flex gap-2">
-          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-lg"></div>
+          <div className="w-16 md:w-24 h-6 bg-gray-800 rounded-full"></div>
         </div>
       </div>
       <table className="w-full border-collapse">

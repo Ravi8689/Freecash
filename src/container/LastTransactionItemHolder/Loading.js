@@ -2,9 +2,9 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="product_main_group1_sub2 flex gap-1 owl-carousel owl-theme mt-1 animate-pulse">
-      <div className="py-2 px-1 gap-1 flex justify-start item-center bg-anovanavbar rounded">
-        <div className="flex items-center justify-center w-9 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
+    <div className="product_main_group1_sub2 flex gap-1 mt-1 animate-pulse">
+      <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
+        <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
             class="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
@@ -16,7 +16,7 @@ const Loading = () => {
             <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
           </svg>
         </div>
-        <div className="flex justify-between w-full items-center px-2">
+        <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
             <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
             <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>

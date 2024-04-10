@@ -5,8 +5,14 @@ import { IoIosStar } from "react-icons/io";
 import { IoPlay } from "react-icons/io5";
 import Link from "next/link";
 import OfferItemCard from "@/components/OfferItemsCard";
+import { useState } from "react";
+import Loading from "./Loading";
 export default function OfferItemHolder() {
+  const [loading, setLoading] = useState(true);
+
   return (
+    <>
+    {loading ? <Loading/> : 
     <div className="product_main_group3 my-5 z-30 overflow-hidden gap-2">
       <div className="product_main_group3_sub1 flex justify-between mb-3">
         <div className="product_main_group3_innergroup1_sub1">
@@ -27,5 +33,7 @@ export default function OfferItemHolder() {
         <OfferItemCard />
       </div>
     </div>
+     }
+     </>
   );
 }

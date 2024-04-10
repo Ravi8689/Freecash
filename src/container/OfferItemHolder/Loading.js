@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-const LoadingContent = () => {
+const Loading = () => {
   return (
-    <div className="flex flex-col overflow-hidden animate-pulse p-4 gap-2">
+    <div className="flex flex-col overflow-hidden animate-pulse mt-4 gap-2">
     <div className="flex justify-between w-full z-40">
       <div className="mb-5 flex gap-2">
       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
@@ -65,7 +65,7 @@ const LoadingContent = () => {
       </div>
     </div>
   </div>
-  );
-};
+  )
+}
 
-export default LoadingContent;
+export default Loading
