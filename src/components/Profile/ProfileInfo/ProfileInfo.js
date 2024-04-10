@@ -1,8 +1,12 @@
 import { Avatar } from "@radix-ui/themes";
-import React from "react";
+import React, { useState } from "react";
 import { MdVerifiedUser } from "react-icons/md";
+import Loading from "./Loading";
 const ProfileInfo = ({userProfile}) => {
+  const [loading,setLoading] =useState(true)
   return (
+    <>
+      {loading ? <Loading/> : 
     <div className="profiledetail-main-group1 flex items-center p-2 gap-3 mb-4">
       <div className="profiledetail-main-group1-image flex flex-col justify-center items-center">
         <Avatar
@@ -27,6 +31,8 @@ const ProfileInfo = ({userProfile}) => {
         </div>
       </div>
     </div>
+    }
+    </>
   );
 };
 
