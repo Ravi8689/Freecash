@@ -75,10 +75,6 @@ hr{
 
 td, th {
   text-align: left;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
-th{
-  display: flex;
-  align-items: center;
-}
