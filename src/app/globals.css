@@ -78,7 +78,7 @@ td, th {
   padding: 8px;
 }
 
-tr{
+th{
   display: flex;
   align-items: center;
 }
