@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RiFileUserFill } from "react-icons/ri";
 import { FaCopy } from "react-icons/fa";
 import { MdOutlinePrivacyTip } from "react-icons/md";
@@ -8,6 +8,11 @@ import Loading from "./Loading";
 
 const ProfileId = ({ userProfile }) => {
   const [loading, setLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
       {loading ? (

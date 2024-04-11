@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoStatsChart } from "react-icons/io5";
 import ProfileStatsData from "./ProfileStatsData/ProfileStatsData";
 import Loading from "./Loading";
 
 const ProfileStats = ({ userProfile }) => {
   const [loading, setLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
       {loading ? (

@@ -7,7 +7,7 @@ import { SiTether } from "react-icons/si";
 import { SiRipple } from "react-icons/si";
 import { SiBinance } from "react-icons/si";
 import { TbCurrencySolana } from "react-icons/tb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "@/store";
 import Loading from "./Loading";
 
@@ -17,6 +17,12 @@ export default function LastTransactionItemHolder() {
   const cryptos=useStore((state)=>state.currencies)
   const [loading,setLoading]=useState(true)
   console.log('crypto list',cryptos)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
 
   return (
     <div className="product_main_group1 text-white mb-2 overflow-hidden flex justify-start gap-2 mt-1">

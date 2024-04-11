@@ -1,6 +1,6 @@
 import { useStore } from "@/store";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoPlay } from "react-icons/io5";
 import { SiBitcoinsv } from "react-icons/si";
 import Loading from "./Loading";
@@ -8,12 +8,18 @@ import Loading from "./Loading";
 export default function FeaturedOffersCardItem() {
   const promotion = useStore((state) => state.promotion);
   const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="flex gap-5">
           {promotion.map((item, index) => {
             return (
               <div

@@ -5,11 +5,15 @@ import { IoIosStar } from "react-icons/io";
 import { IoPlay } from "react-icons/io5";
 import Link from "next/link";
 import OfferItemCard from "@/components/OfferItemsCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./Loading";
 export default function OfferItemHolder() {
   const [loading, setLoading] = useState(true);
-
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
     {loading ? <Loading/> : 

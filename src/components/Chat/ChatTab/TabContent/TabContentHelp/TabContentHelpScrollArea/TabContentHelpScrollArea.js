@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Avatar, Box, ScrollArea, Text } from "@radix-ui/themes";
 import TabContentHelpScrollAreaMessage from './TabContentHelpScrollAreaMessage/TabContentHelpScrollAreaMessage';
 import Loading from '@/components/Chat/Loading';
@@ -6,6 +6,11 @@ import Loading from '@/components/Chat/Loading';
 
 const TabContentHelpScrollArea = ({messages,handleSubmit,handleDelete,newMessage,setNewMessage}) => {
   const [loading,setLoading]=useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <ScrollArea
     className=""

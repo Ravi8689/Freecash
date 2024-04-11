@@ -1,9 +1,14 @@
 import { Avatar } from "@radix-ui/themes";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdVerifiedUser } from "react-icons/md";
 import Loading from "./Loading";
 const ProfileInfo = ({userProfile}) => {
   const [loading,setLoading] =useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
       {loading ? <Loading/> : 

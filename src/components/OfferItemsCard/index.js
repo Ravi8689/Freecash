@@ -9,7 +9,8 @@ const ProductItem = () => {
   const products = useStore((state) => state.products);
   return (
 
-     <div>{products.map((item,index) => {
+     <>
+     {products.map((item,index) => {
         return (
           <div key={index} className="product_main_group3_sub2_item bg-anova4 w-28 md:w-32 p-3 flex flex-col rounded-lg">
             <div className="product_main_group3_innergroup2_item_image flex flex-col  items-center ">
@@ -42,7 +43,7 @@ const ProductItem = () => {
             </div>
           </div>
         );
-      })}</div>
+      })}</>
    
   );
 };

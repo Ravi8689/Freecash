@@ -5,17 +5,22 @@ import { IoPlay } from "react-icons/io5";
 import Link from "next/link";
 import OfferItemCard from "@/components/OfferItemsCard";
 import { TbCoinFilled } from "react-icons/tb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./Loading";
 
 export default function AnimatedOfferItemHolder() {
   const [loading, setLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
   return (
     <>
       {loading ? (
         <Loading />
       ) : (
-        <div className="group3_premium  bg-anova2 my-5 border-2 border-anova3 rounded-lg p-4 overflow-hidden gap-2">
+        <div className="group3_premium  bg-anova2 my-5 border-2 border-anova3 flex flex-col rounded-lg p-4 overflow-hidden gap-2">
           <div className="product3_premium_image">
             <Image width={350} height={350} src="/images/dot.png" />
           </div>
