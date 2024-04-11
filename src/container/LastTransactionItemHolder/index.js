@@ -34,7 +34,7 @@ export default function LastTransactionItemHolder() {
 
    
       {loading ? <Loading/> :
-       <div className="product_main_group1_sub2 flex gap-2 owl-carousel owl-theme">
+       <div className="product_main_group1_sub2 flex gap-2">
  
         {cryptos.map((item, index) => {
         return (
