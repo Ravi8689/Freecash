@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Head from "next/head"; 
 import Navbar from "@/components/Navbar";
 import "@radix-ui/themes/styles.css";
 import { Theme, ThemePanel } from "@radix-ui/themes";
@@ -19,11 +20,17 @@ export const metadata = {
     default:'FreeCash',
     template:'%s | FreeCash'
   },
-  description: "Naya app by nischal and sujan",
+  description: "naya app, paisa app , hamropaisa, hamrorupiya",
 };
 
 export default function RootLayout({ children }) {
   return (
+    <>
+     <Head>
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
+ 
     <html lang="en">
       <body className={inter.className}>
         {children}
@@ -33,5 +40,6 @@ export default function RootLayout({ children }) {
         <Script src="../../static/js/sidebar.js"></Script>
       </body>
     </html>
+    </>
   );
 }
