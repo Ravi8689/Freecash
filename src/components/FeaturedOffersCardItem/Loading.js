@@ -4,9 +4,9 @@ const Loading = () => {
   return (
     <div className="flex justify-between gap-5 overflow-hidden animate-pulse">
       <div className="flex flex-col gap-1 w-40 md:w-72 rounded-lg bg-anova4 pb-4">
-        <div class="flex items-center justify-center h-40 mb-2 bg-gray-300 rounded dark:bg-gray-700">
+        <div className="flex items-center justify-center h-40 mb-2 bg-gray-300 rounded dark:bg-gray-700">
           <svg
-            class="w-14 h-8 text-gray-200 dark:text-gray-600"
+            className="w-14 h-8 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -19,20 +19,20 @@ const Loading = () => {
 
         <div className="flex justify-between items-center px-2">
           <div>
-            <div class="h-2 w-16 md:w-24 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 md:w-24 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col gap-1 w-40 md:w-72 rounded-lg bg-anova4 pb-4">
-        <div class="flex items-center justify-center h-40 mb-2 bg-gray-300 rounded dark:bg-gray-700">
+        <div className="flex items-center justify-center h-40 mb-2 bg-gray-300 rounded dark:bg-gray-700">
           <svg
-            class="w-14 h-8 text-gray-200 dark:text-gray-600"
+            className="w-14 h-8 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -45,12 +45,12 @@ const Loading = () => {
 
         <div className="flex justify-between items-center px-2">
           <div>
-            <div class="h-2 w-16 md:w-24 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 md:w-24 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10 md:w-14 bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>

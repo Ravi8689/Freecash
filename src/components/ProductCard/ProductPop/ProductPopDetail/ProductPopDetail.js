@@ -16,7 +16,7 @@ const ProductPopDetail = ({product}) => {
           className="rounded-lg"
           width={90}
           height={90}
-          alt="image"
+          alt="product image"
           src={product.image}
         />
       </div>

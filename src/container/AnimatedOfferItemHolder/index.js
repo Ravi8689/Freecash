@@ -3,18 +3,27 @@ import { SiBitcoinsv } from "react-icons/si";
 
 import { IoPlay } from "react-icons/io5";
 import Link from "next/link";
-import OfferItemCard from "@/components/OfferItemsCard";
+import ProductCard from "@/components/ProductCard";
 import { TbCoinFilled } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { useStore } from "@/store";
 
 export default function AnimatedOfferItemHolder() {
+  const products = useStore((state) => state.products);
+  const getProducts = useStore((state) => state.getProducts);
+
+  useEffect(() => {
+    getProducts();
+  }, [getProducts]);
+  // console.log("new", products);
+
   const [loading, setLoading] = useState(true);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setLoading(false)
-    },2000)
-  },[])
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
       {loading ? (
@@ -22,7 +31,7 @@ export default function AnimatedOfferItemHolder() {
       ) : (
         <div className="group3_premium  bg-anova2 my-5 border-2 border-anova3 flex flex-col rounded-lg p-4 overflow-hidden gap-2">
           <div className="product3_premium_image">
-            <Image width={350} height={350} src="/images/dot.png" />
+            <Image width={350} height={350} alt="product image" priority src="/images/dot.png" />
           </div>
           <div className="product_main_group3_sub1 w-full z-20  flex justify-between mb-3">
             <div className="product_main_group3_innergroup1_sub1">
@@ -40,7 +49,9 @@ export default function AnimatedOfferItemHolder() {
           </div>
 
           <div className="product_main_group3_sub2 z-30 owl-carousel owl-theme flex gap-5">
-            <OfferItemCard />
+          {products.filter((items)=>items.type === 'premium').map((item, index) => {
+              return <ProductCard key={index} item={item} />;
+            })}
           </div>
         </div>
       )}

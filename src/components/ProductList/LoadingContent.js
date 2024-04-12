@@ -7,7 +7,7 @@ const LoadingContent = () => {
       <div className="mb-5 flex gap-2">
       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
         <svg
-          class="w-4 h-4 text-gray-200 dark:text-gray-800"
+          className="w-4 h-4 text-gray-200 dark:text-gray-800"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -27,9 +27,9 @@ const LoadingContent = () => {
 
     <div className="flex justify-start gap-5 z-40 w-full">
       <div className="bg-anova4 min-w-28 md:min-w-32 p-3 flex flex-col rounded-lg">
-        <div class="flex items-center justify-center h-28 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <div className="flex items-center justify-center h-28 mb-4 bg-gray-300 rounded dark:bg-gray-700">
           <svg
-            class="w-14 h-8 text-gray-200 dark:text-gray-600"
+            className="w-14 h-8 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -40,15 +40,15 @@ const LoadingContent = () => {
           </svg>
         </div>
 
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-4"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-4"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
       </div>
 
       <div className="bg-anova4 min-w-28 md:min-w-32 p-3 flex flex-col rounded-lg">
-        <div class="flex items-center justify-center h-28 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <div className="flex items-center justify-center h-28 mb-4 bg-gray-300 rounded dark:bg-gray-700">
           <svg
-            class="w-14 h-8 text-gray-200 dark:text-gray-600"
+            className="w-14 h-8 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -59,9 +59,9 @@ const LoadingContent = () => {
           </svg>
         </div>
 
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-4"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-4"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
       </div>
     </div>
   </div>

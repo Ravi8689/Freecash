@@ -6,7 +6,12 @@ import { SiBitcoinsv } from "react-icons/si";
 import Loading from "./Loading";
 
 export default function FeaturedOffersCardItem() {
-  const promotion = useStore((state) => state.promotion);
+  const banners = useStore((state) => state.banners);
+  const getBanners=useStore((state)=>state.getBanners)
+
+  useEffect(()=>{
+    getBanners()
+  },[getBanners])
   const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
@@ -20,7 +25,7 @@ export default function FeaturedOffersCardItem() {
         <Loading />
       ) : (
         <div className="flex gap-5">
-          {promotion.map((item, index) => {
+          {banners.map((item, index) => {
             return (
               <div
                 key={index}
@@ -31,7 +36,7 @@ export default function FeaturedOffersCardItem() {
                     className=""
                     width={350}
                     height={100}
-                    alt="image"
+                    alt="product image"
                     src={item.image}
                   />
                   <div className="play-button-icon text-white ">

@@ -46,7 +46,7 @@ const ProtectedLayout = ({ children }) => {
  
          {/*  ) : (
         <div className="flex flex-col justify-center items-center h-screen">
-         <div> <Image width={280} alt='no' height={280} src='/images/login.svg'/></div>
+         <div> <Image width={280} alt='image' height={280} src='/images/login.svg'/></div>
          <div> <h2 className="text-white text-center mt-10 text-4xl">Please click to Sign in to vist the page</h2></div>
 
         </div>

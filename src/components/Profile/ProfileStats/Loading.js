@@ -6,7 +6,7 @@ const Loading = () => {
       <div className="flex items-center gap-2">
         <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-3 h-3 text-gray-200 dark:text-gray-800"
+            className="w-3 h-3 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

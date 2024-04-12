@@ -15,8 +15,13 @@ import Loading from "./Loading";
 
 export default function LastTransactionItemHolder() {
   const cryptos=useStore((state)=>state.currencies)
+  const currency=useStore((state)=>state.currency)
+  const getCurrency=useStore((state)=>state.getCurrency)
+
+  useEffect(()=>{
+    getCurrency()
+  },[getCurrency])
   const [loading,setLoading]=useState(true)
-  console.log('crypto list',cryptos)
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -36,7 +41,7 @@ export default function LastTransactionItemHolder() {
       {loading ? <Loading/> :
        <div className="product_main_group1_sub2 flex gap-2">
  
-        {cryptos.map((item, index) => {
+        {currency.map((item, index) => {
         return (
           <LastTransactionItem key={index} item={item}/>
         );

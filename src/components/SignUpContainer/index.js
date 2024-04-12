@@ -12,15 +12,12 @@ export default function SignUpContainer() {
     password:''
   })
 
-  const createUser=useStore((state)=>state.addUser)
+  const createUser=useStore((state)=>state.signup)
 
-  const handleSubmit=()=>{
-    if(details){
-      createUser({
-        fullname:details.fullname,
-        email:details.email,
-        password:details.password
-      })
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    if(details.email && details.password){
+      createUser(details.email,details.password)
   
       console.log('Successful')
     }else{

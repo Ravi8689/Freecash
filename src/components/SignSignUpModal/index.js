@@ -41,7 +41,7 @@ export default function SignSignUpModal() {
               type="submit"
               className="other-sign-method-auth-1 w-full mb-3 flex bg-white hover:bg-gray-200 p-2 rounded justify-center items-center"
             >
-              <Image width={20} height={10} src="/images/google.png" />
+              <Image width={20} height={10} src="/images/google.png" alt='Google'/>
               <span className="ml-2 font-medium text-anova1 text-sm">
                 Continue with Google
               </span>
@@ -53,7 +53,7 @@ export default function SignSignUpModal() {
               type="submit"
               className="other-sign-method-auth-2 w-full flex bg-blue-800 hover:bg-blue-700 p-2 rounded justify-center items-center"
             >
-              <Image width={8} height={10} src="/images/face.png" />
+              <Image width={8} height={10} src="/images/face.png" alt="facebook"/>
               <span className="ml-2 font-medium text-white text-sm">
                 Continue with Facebook
               </span>

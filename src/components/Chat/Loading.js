@@ -6,7 +6,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -32,7 +32,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -58,7 +58,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -84,7 +84,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -110,7 +110,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -136,7 +136,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -162,7 +162,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -188,7 +188,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -214,7 +214,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -240,7 +240,7 @@ const Loading = () => {
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center justify-center w-12 h-10 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-5 h-5 text-gray-200 dark:text-gray-800"
+            className="w-5 h-5 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

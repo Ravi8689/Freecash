@@ -1,7 +1,7 @@
 const dom1=document.getElementsByClassName('list-menu')
 const dom2=document.getElementsByClassName('sidebar-toggle')
 
-console.log("hello",dom1)
+
 
 
 function onClickSidebar(){

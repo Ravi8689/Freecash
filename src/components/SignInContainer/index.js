@@ -4,24 +4,25 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-
 export default function SignInContainer() {
-  const loginBtn=useStore((state)=>state.login)
-  const router=useRouter()
-  
+  const loginBtn = useStore((state) => state.userLogin);
+  const router = useRouter();
 
-  const [userData,setUserData]=useState({
-    email:''
-  })
+  const [userData, setUserData] = useState({
+    email: '',
+    password: '',
+  });
 
-  const handleLogin=(e)=>{
-    e.preventDefault()
-    loginBtn(userData)
-    // router.push('/')
-  }
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (userData.email && userData.password) {
+      loginBtn(userData.email, userData.password);
+    }
+    router.push("/");
+  };
   return (
     <div>
-      <Form.Root >
+      <Form.Root>
         <Form.Field className="FormField" name="email">
           <div
             style={{
@@ -30,7 +31,9 @@ export default function SignInContainer() {
               justifyContent: "space-between",
             }}
           >
-            <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">Email</Form.Label>
+            <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">
+              Email
+            </Form.Label>
             <Form.Message className="FormMessage" match="valueMissing">
               Please enter your email
             </Form.Message>
@@ -39,7 +42,13 @@ export default function SignInContainer() {
             </Form.Message>
           </div>
           <Form.Control asChild>
-            <input className="Input" type="email" required onChange={(e)=>setUserData({email:e.target.value})} value={userData.email}/>
+            <input
+              className="Input"
+              type="email"
+              required
+              onChange={(e) => setUserData({ email: e.target.value })}
+              value={userData.email}
+            />
           </Form.Control>
         </Form.Field>
 
@@ -62,14 +71,21 @@ export default function SignInContainer() {
             </Form.Message>
           </div>
           <Form.Control asChild>
-            <input className="Input" type="password" required />
+            <input
+              className="Input"
+              type="password"
+              required
+              value={userData.password}
+              onChange={(e) => setUserData({ password: e.target.value })}
+            />
           </Form.Control>
         </Form.Field>
         <Link className="text-sm" href="/">
           Forgot your password?
         </Link>
         <Form.Submit asChild>
-          <button onClick={handleLogin}
+          <button
+            onClick={handleLogin}
             className="w-full text-center bg-green-600 text-white hover:bg-green-800 px-2 py-2 rounded"
             style={{ marginTop: 10 }}
           >

@@ -40,7 +40,7 @@ const Items = () => {
                 width={150}
                 height={150}
                 className="rounded-lg w-20 md:w-36"
-                alt="image"
+                alt="product image"
                 src={item.image}
               />
               <div className="play-button-icon text-white ">

@@ -6,7 +6,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -18,12 +18,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -43,12 +43,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -68,12 +68,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -95,12 +95,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -120,19 +120,19 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -144,12 +144,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ const Loading = () => {
       <div className="py-2 px-1 gap-1  flex justify-start item-center bg-anovanavbar rounded">
         <div className="flex items-center justify-center w-10 h-8 rounded-full bg-gray-300 dark:bg-gray-700">
           <svg
-            class="w-4 h-4 text-gray-200 dark:text-gray-800"
+            className="w-4 h-4 text-gray-200 dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -169,12 +169,12 @@ const Loading = () => {
         </div>
         <div className="flex justify-between w-full items-center px-2 gap-2">
           <div>
-            <div class="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-16 bg-gray-200 rounded dark:bg-gray-700 mb-2"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
 
           <div className="flex justify-between items-center">
-            <div class="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-2 w-10  bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>

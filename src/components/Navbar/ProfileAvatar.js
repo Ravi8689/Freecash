@@ -9,9 +9,9 @@ import Link from "next/link";
 import { useStore } from "@/store";
 
 const ProfileAvatar = () => {
-  const logout=useStore((state)=>state.logout)
+  const logout=useStore((state)=>state.userLogout)
   const user=useStore((state)=>state.user)
-  console.log(user)
+  // console.log(user)
 
   return (
     <div className="hidden md:block ">
@@ -24,13 +24,14 @@ const ProfileAvatar = () => {
               radius="full"
               src="/images/course.jpg"
               fallback="N"
+          
             />
             <CaretDownIcon width="12" height="12" />
           </Button>
         </DropdownMenu.Trigger>
         <DropdownMenu.Content className="windows-group2">
         <DropdownMenu.Item className="gap-1">
-          <Link href='/profile' className="font-bold">Hello, {user.email}</Link>                   
+          <Link href='/profile' className="font-bold">Hello,abc</Link>                   
           </DropdownMenu.Item>
           <hr/>
           <DropdownMenu.Item className="gap-1">
