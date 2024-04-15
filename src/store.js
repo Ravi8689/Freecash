@@ -78,27 +78,32 @@ const store = (set) => ({
       password
     })
     if(data){
-      set({user: data.user, isAuthenticated:true})
+      set({user: data.user})
+      console.log(data.user)
     }else{
       console.log('Login Failed',error)
     }
   },
 
-  userLogin:async()=>{
+  userLogin:async(email,password)=>{
     const {data,error}=await supabase.auth.signInWithPassword({
-      email,password
+      email,
+      password
     })
-    try{
-      set({user:data.user,isAuthenticated:true})
-    }catch(error){
-      console.log('Login Failed',error)
+    if(data){
+      set({user:data, isAuthenticated:true})
+      console.log(data)
+      console.log('login alert')
+    }else{
+      console.log('failed login')
     }
+
   },
 
   userLogout:async()=>{
     try{
       await supabase.auth.signOut()
-      set({user:null,error:null})
+      set({user:null,error:null,isAuthenticated:false})
     }catch(error){
       console.log("User is logged out",error)
     }

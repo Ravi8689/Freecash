@@ -13,6 +13,10 @@ const ProfileAvatar = () => {
   const user=useStore((state)=>state.user)
   // console.log(user)
 
+  const handleLogout=()=>{
+    logout()
+  }
+
   return (
     <div className="hidden md:block ">
       <DropdownMenu.Root>
@@ -39,7 +43,7 @@ const ProfileAvatar = () => {
           </DropdownMenu.Item>
           <hr/>
           <DropdownMenu.Item className="gap-1">
-          <button onClick={logout}>Logout</button>                   
+          <button onClick={handleLogout}>Logout</button>                   
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Root>

@@ -31,7 +31,7 @@ export default function AnimatedOfferItemHolder() {
       ) : (
         <div className="group3_premium  bg-anova2 my-5 border-2 border-anova3 flex flex-col rounded-lg p-4 overflow-hidden gap-2">
           <div className="product3_premium_image">
-            <Image width={350} height={350} alt="product image" priority src="/images/dot.png" />
+            <Image width={350} height={350} alt="product_image" priority src="/images/dot.png" />
           </div>
           <div className="product_main_group3_sub1 w-full z-20  flex justify-between mb-3">
             <div className="product_main_group3_innergroup1_sub1">

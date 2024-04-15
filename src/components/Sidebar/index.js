@@ -67,7 +67,7 @@ const Sidebar = () => {
         <hr className="px-2 border-anovatext2 list-menu"/>
         <div className="sidebar-main-list-group-2 list-menu">
             <ul>
-                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 bg-anova6"><Image width={28} height={28} src='/images/Nepal.png'/><p>Nepal</p></Link></li>
+                <li><Link href='#' className="flex items-center text-anovatext1 text-base gap-2 my-2 p-2 bg-anova6"><Image width={28} height={28} src='/images/Nepal.png' alt="country_image"/><p>Nepal</p></Link></li>
                 <ul className="flex justify-between my-4">
                 <li><Link href='#' className="flex items-center text-anovatext1 hover:text-white text-base gap-2 p-2 hover:bg-blue-800 rounded-full"><FaFacebook /><span className="text-xs hidden hover:block">Product</span></Link></li>
                 <li><Link href='#' className="flex items-center text-anovatext1 hover:text-white text-base gap-2 p-2 hover:bg-pink-600 rounded-full"><FaInstagram /><span className="text-xs hidden">Product</span></Link></li>

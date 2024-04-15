@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SiBitcoinsv } from "react-icons/si";
 
 import { IoIosStar } from "react-icons/io";

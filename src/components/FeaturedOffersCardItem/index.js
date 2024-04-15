@@ -36,7 +36,7 @@ export default function FeaturedOffersCardItem() {
                     className=""
                     width={350}
                     height={100}
-                    alt="product image"
+                    alt="product_image"
                     src={item.image}
                   />
                   <div className="play-button-icon text-white ">

@@ -11,14 +11,7 @@ export default function Logo({ onClickSidebar }) {
       />
 
       <Link href="/" className="flex items-center">
-        <Image
-          className="navbar-logo" style={{width:"auto",height:'auto'}}
-          width={20}
-          height={20}
-          priority          
-          alt="new logo"
-          src="/images/logo.png"
-        />
+      <Image className="navbar-logo w-4 h-6" width={20} height={20} priority alt="new_logo" src="/images/logo.png" />
         <span className="ml-2 text-green-600 font-bold hidden md:block">
           FreeCash
         </span>
