@@ -78,17 +78,17 @@ export default function LastTransactionItemHolder() {
     </div>
 
    
-      {loading ? <Loading/> : 
+      {/* {loading ? <Loading/> :  */}
        <div className="product_main_group1_sub2 flex gap-2 owl-carousel owl-theme">
  
-        {currency.map((item, index) => {
+        {crypto.map((item, index) => {
         return (
           <LastTransactionItem key={index} item={item}/>
         );
       })}
          </div>
     
-       } 
+       {/* }  */}
  
   </div>
   );
