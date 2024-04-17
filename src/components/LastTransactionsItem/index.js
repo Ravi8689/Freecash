@@ -9,7 +9,7 @@ export default function LastTransactionItem({ item }) {
   const created_at=`${year}-${month}-${day}`
   return (
 
-    <div className="product_main_group1_sub2_item py-1 px-2 gap-2 flex justify-between item-center gap-1 bg-anovanavbar flex justify-center items-center rounded">
+    <div className="product_main_group1_sub2_item py-2 px-2 gap-2 flex justify-between item-center gap-1 bg-anovanavbar flex justify-center items-center rounded">
       <div className="product_main_group1_sub2_image">
         <SiBitcoinsv className={`w-6 h-6 text-${item.color}-500`} />
         {/* <Image width={50} height={50} src={item.image} alt="product image" style={{minWidth:'45px'}}/> */}
