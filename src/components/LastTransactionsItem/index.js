@@ -11,15 +11,15 @@ export default function LastTransactionItem({ item }) {
 
     <div className="product_main_group1_sub2_item py-1 px-2 gap-2 flex justify-between item-center gap-1 bg-anovanavbar flex justify-center items-center rounded">
       <div className="product_main_group1_sub2_image">
-        {/* <SiBitcoinsv className={`w-6 h-6 text-${item.color}-500`} /> */}
-        <Image width={50} height={50} src={item.image} alt="product image" style={{minWidth:'45px'}}/>
+        <SiBitcoinsv className={`w-6 h-6 text-${item.color}-500`} />
+        {/* <Image width={50} height={50} src={item.image} alt="product image" style={{minWidth:'45px'}}/> */}
       </div>
       <div className="product_main_group1_sub2_content text-xs">
         <div className="product_main_group1_sub2_content_title font-medium">
           <p>{item.title}</p>
         </div>
         <div className="product_main_group1_sub2_content_time text-anovatext1 text-nowrap hidden md:block">
-          <p>{created_at}</p>
+          <p>{item.time}</p>
         </div>
       </div>
       <div className="product_main_group1_sub2_number px-2 py-1 font-medium rounded bg-anova6 text-xs ml-3">
