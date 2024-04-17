@@ -71,7 +71,7 @@ const store = (set) => ({
   // logout: () => set({ isAuthenticated: false }),
 
   user:null,
-  isAuthenticated: false,
+  isAuthenticated: true,
   signup:async(email, password)=>{
     const {data,error}=await supabase.auth.signUp({
       email,

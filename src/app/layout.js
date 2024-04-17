@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={inter.className}>
           {children}
+          
           <Script src="../../static/js/resources/jquery.js"></Script>
           <Script src="../../static/js/owlCarousel.js"></Script>
           <Script src="../../static/js/resources/OwlCarousel2-2.3.4/dist/owl.carousel.js"></Script>
