@@ -5,6 +5,8 @@ import * as Form from "@radix-ui/react-form";
 import Link from "next/link";
 import { useState } from "react";
 
+import {signup} from '@/actions/auth/index'
+
 export default function SignUpContainer() {
   const [details, setDetails] = useState({
     fullname: "",
@@ -14,10 +16,11 @@ export default function SignUpContainer() {
 
   const createUser = useStore((state) => state.signup);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (details.email && details.password) {
-      createUser(details.email, details.password);
-
+      console.log(details)
+      // createUser(details.email, details.password);
+      await signup(details)
       console.log("Successful");
     } else {
       console.log("Not Saved");
@@ -25,8 +28,8 @@ export default function SignUpContainer() {
   };
 
   return (
-    <Form.Root>
-      <Form.Field className="FormField" name="text">
+    <Form.Root method="POST" onSubmit={handleSubmit}>
+      <Form.Field className="FormField" name="fullname">
         <div className="flex justify-between items-baseline">
           <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">
             Fullname
@@ -51,7 +54,7 @@ export default function SignUpContainer() {
         </Form.Control>
       </Form.Field>
 
-      <Form.Field className="FormField" name="text">
+      <Form.Field className="FormField" name="email">
         <div className="flex justify-between items-baseline">
           <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">
             Email
@@ -103,7 +106,6 @@ export default function SignUpContainer() {
       </Link>
       <Form.Submit asChild>
         <button
-          onClick={handleSubmit}
           className="w-full text-center bg-green-600 text-white hover:bg-green-800 px-2 py-2 rounded mt-4"
         >
           Register

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import {login} from '@/actions/auth/index'
+
 export default function SignInContainer() {
   const loginBtn = useStore((state) => state.userLogin);
   const router = useRouter();
@@ -13,10 +15,12 @@ export default function SignInContainer() {
     password:''
   })
 
-  const handleLogin=(e)=>{
+  const handleLogin=async (e)=>{
     e.preventDefault()
     try{
+      await login(details)
       loginBtn(details.email,details.password)
+
       router.push('/profile')
       console.log('Successful')
     }catch(error){
@@ -27,7 +31,7 @@ export default function SignInContainer() {
 
   return (
     <div>
-      <Form.Root onSubmit={handleLogin}>
+      <Form.Root onSubmit={handleLogin} method="POST">
         <Form.Field className="FormField" name="email">
           <div className="flex justify-between items-baseline" >
             <Form.Label className="FormLabel text-anovatext1 text-xs md:text-sm">

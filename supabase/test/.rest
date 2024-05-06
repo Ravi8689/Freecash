@@ -1,0 +1,5 @@
+
+
+POST https://qoerunyqyrrnbehvesir.supabase.co/functions/v1/getCpaOffers HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFvZXJ1bnlxeXJybmJlaHZlc2lyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI4ODg4ODcsImV4cCI6MjAyODQ2NDg4N30.hDy06kqIRnMdd0xhZ31kmV-eZwGuX1Zs7EtM6v5b4EE
+Content-Type: application/json
